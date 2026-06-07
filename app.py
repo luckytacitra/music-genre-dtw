@@ -13,14 +13,16 @@ st.set_page_config(
 )
 
 st.title("🎵 Music Genre Recognition")
-st.write("Dynamic Time Warping (DTW) + MFCC")
+st.write(
+    "Klasifikasi genre musik menggunakan Mel Frequency Cepstral Coefficients (MFCC) dan Dynamic Time Warping (DTW)."
+)
 
 with open("database.pkl", "rb") as f:
     database = pickle.load(f)
 
 uploaded_file = st.file_uploader(
-    "Upload file musik (.wav)",
-    type=["wav"]
+    "Upload file musik",
+    type=["wav", "mp3"]
 )
 
 if uploaded_file is not None:
@@ -193,8 +195,10 @@ if uploaded_file is not None:
         "🥇 Top 3 Closest Genres"
     )
 
-    for i in range(3):
+    medal = ["🥇", "🥈", "🥉"]
 
-        st.write(
-            f"{i+1}. {all_result[i][0].upper()}  →  {all_result[i][1]:.2f}"
-        )
+for i in range(3):
+
+    st.write(
+        f"{medal[i]} {all_result[i][0].upper()}   ({all_result[i][1]:.2f})"
+    )
