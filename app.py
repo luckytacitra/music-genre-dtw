@@ -183,16 +183,4 @@ if uploaded_file is not None:
             )
         )
 
-    # ==========================
-    # TOP 3
-    # ==========================
-
-    all_result.sort(
-        key=lambda x: x[1]
-    )
-
-    st.subheader(
-        "🥇 Top 3 Closest Genres"
-    )
-
-st.write("🥇 Prediction Completed")
+    
