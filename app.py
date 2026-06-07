@@ -131,7 +131,7 @@ if uploaded_file is not None:
     # PREPARE DTW
     # ==========================
 
-    test_mfcc = np.mean(
+    test_mfcc = np.median(
         mfcc,
         axis=1
     )
