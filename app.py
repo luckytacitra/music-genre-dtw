@@ -34,12 +34,11 @@ if uploaded_file is not None:
     y, sr = librosa.load(
     uploaded_file,
     duration=10
-)
+    )
+    # Normalisasi volume audio
+    y = librosa.util.normalize(y)
 
-# Normalisasi volume audio
-y = librosa.util.normalize(y)
-
-st.subheader("📄 Audio Information")
+    st.subheader("📄 Audio Information")
 
     st.subheader("📄 Audio Information")
 
