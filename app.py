@@ -195,7 +195,11 @@ if uploaded_file is not None:
         "🥇 Top 3 Closest Genres"
     )
 
-    medal = ["🥇", "🥈", "🥉"]
+medal = [
+    "🥇",
+    "🥈",
+    "🥉"
+]
 
 for i in range(3):
 
