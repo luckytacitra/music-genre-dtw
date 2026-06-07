@@ -195,14 +195,4 @@ if uploaded_file is not None:
         "🥇 Top 3 Closest Genres"
     )
 
-medal = [
-    "🥇",
-    "🥈",
-    "🥉"
-]
-
-for i in range(3):
-
-    st.write(
-        f"{medal[i]} {all_result[i][0].upper()}   ({all_result[i][1]:.2f})"
-    )
+st.write("🥇 Prediction Completed")
