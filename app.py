@@ -33,7 +33,7 @@ if uploaded_file is not None:
 
     y, sr = librosa.load(
         uploaded_file,
-        duration=3
+        duration=10
     )
 
     st.subheader("📄 Audio Information")
